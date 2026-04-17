@@ -68,6 +68,14 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
+                  to="/residential-installation"
+                  className="text-sm text-muted-foreground hover:text-solar transition-colors"
+                >
+                  {language === "en" ? "Residential Installation" : "Instalación Residencial"}
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/services#service-solar"
                   className="text-sm text-muted-foreground hover:text-solar transition-colors"
                 >

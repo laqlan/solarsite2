@@ -164,11 +164,9 @@ export default function Home() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden" style={{
-        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/home/hero-solar.jpg)",
+      <section className="relative overflow-hidden hero-section" style={{
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
         backgroundColor: "#1a1a1a",
         minHeight: "88vh",
         display: "flex",
@@ -217,7 +215,7 @@ export default function Home() {
                 <a href="https://wa.me/34925518492" className="px-8 py-3.5 rounded-xl text-base font-semibold transition-all hover:opacity-80 flex items-center justify-center gap-2"
                   style={{ backgroundColor: "#25D366", color: "white" }}>
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.782 1.15l-.335.16-.348-.052c-1.227-.183-2.39-.682-3.428-1.408.533 2.562 2.404 4.771 4.771 5.471l.161.028-.004.135c-.85.594-1.995 1.465-1.995 2.863 0 .732.273 1.428.744 1.927 1.012-.077 2.006-.455 2.869-1.102 1.026.057 2.04-.245 2.932-.997 1.158-1.002 1.85-2.387 1.85-3.771 0-1.002-.267-1.95-.768-2.77 1.404-1.189 2.279-3.011 2.279-5.016 0-.235-.02-.465-.057-.693a9.865 9.865 0 00-4.926 1.452z"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l6.29-.97C9 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.35-3.88-.94l-.28-.15-2.89.44.44-2.89-.15-.28C4.35 14.73 4 13.41 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm3.71-8.04c-.18-.09-1.08-.53-1.25-.59-.17-.07-.29-.11-.41.11-.12.22-.46.59-.56.71-.1.12-.21.13-.39.04-1.78-.89-2.79-1.28-3.68-2.79-.25-.43.25-.41.25-.41.65-1.06.73-1.7.48-2.04-.25-.35-.46-.45-.73-.47-.27-.02-.56 0-.85.01-.29.01-.76.29-1.14.55-1.58 1.14-1.26 3.32-.06 5.25 1.2 1.93 3.40 3.18 5.84 3.89.71.24 1.43.12 2.02-.3.37-.28.68-.76.76-1.29.06-.41-.13-.65-.33-.72z"/>
                   </svg>
                   {t("nav.whatsapp")}
                 </a>
@@ -405,9 +403,9 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-10">
-            <button className="btn-solar px-10 py-4 rounded-xl text-base font-bold shadow-xl transition-transform hover:scale-105">
+            <Link to="/contact" className="inline-block btn-solar px-10 py-4 rounded-xl text-base font-bold shadow-xl transition-transform hover:scale-105 no-underline">
               {language === "es" ? "Empezar ahora – es gratis" : "Get started – it's free"}
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -514,14 +512,14 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-xl text-sm font-bold transition-all hover:scale-105 ${plan.highlight ? "btn-solar" : ""}`}
+                <Link to="/contact" className={`w-full py-3 rounded-xl text-sm font-bold transition-all hover:scale-105 inline-block text-center no-underline ${plan.highlight ? "btn-solar" : ""}`}
                   style={!plan.highlight ? {
                     backgroundColor: "hsl(205 60% 92%)",
                     color: "hsl(205 60% 30%)",
                     border: "1.5px solid hsl(205 60% 78%)"
                   } : {}}>
                   {plan.price === (language === "es" ? "A medida" : "Custom") ? (language === "es" ? "Solicitar estudio" : "Request study") : (language === "es" ? "Contratar ahora" : "Get started now")}
-                </button>
+                </Link>
               </div>
             ))}
           </div>

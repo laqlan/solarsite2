@@ -179,3 +179,17 @@
 .btn-solar:hover {
   animation-duration: 1.5s;
 }
+
+/* ── Responsive hero background images ── */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/home/hero-solar.jpg) !important;
+  background-attachment: fixed !important;
+}
+
+/* Mobile: Use the mobile image and disable fixed attachment */
+@media (max-width: 767px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/home/hero-solar-mobile.png) !important;
+    background-attachment: scroll !important;
+  }
+}

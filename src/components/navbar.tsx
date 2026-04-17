@@ -13,10 +13,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
             <div className="h-9 w-9 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, rgb(250, 168, 5), rgb(255, 207, 77))" }}>
-              <svg className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="12" cy="12" r="4"></circle>
-                <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"></path>
-              </svg>
+              <img src="/images/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
             </div>
             <span className="text-lg sm:text-xl font-bold" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'rgb(34, 46, 57)' }}>
               Pure<span style={{ color: "rgb(250, 168, 5)" }}>Grid</span>

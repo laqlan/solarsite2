@@ -62,38 +62,38 @@ export default function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Services</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/services#service-solar"
                   className="text-sm text-muted-foreground hover:text-solar transition-colors"
                 >
                   {language === "en" ? "Solar Panels" : "Paneles Solares"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/services#service-battery"
                   className="text-sm text-muted-foreground hover:text-solar transition-colors"
                 >
                   {language === "en" ? "Battery Storage" : "Almacenamiento"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/services#service-ev"
                   className="text-sm text-muted-foreground hover:text-solar transition-colors"
                 >
                   {language === "en" ? "EV Charging" : "Carga de VE"}
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/services#service-smart"
                   className="text-sm text-muted-foreground hover:text-solar transition-colors"
                 >
                   {language === "en"
                     ? "Smart Energy"
                     : "Gestión Inteligente"}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

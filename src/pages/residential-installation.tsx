@@ -5,6 +5,15 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/Footer";
 import { useI18n } from "@/i18n/context";
 
+/* ── tiny icon helpers (inline SVGs so no extra deps needed) ── */
+type IconProps = { className?: string; style?: React.CSSProperties };
+const SunIcon = ({ className = "", style }: IconProps) => (
+  <svg className={className} style={style} viewBox="0 0 24 24" fill="currentColor">
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none"/>
+  </svg>
+);
+
 const ResidentialInstallation = () => {
   const { language, t } = useI18n();
 
@@ -162,25 +171,26 @@ const ResidentialInstallation = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-solar to-orange-600 text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            {language === "en" 
-              ? "Ready to Go Solar?" 
-              : "¿Listo para usar Energía Solar?"}
+      {/* CTA BANNER */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 text-center" style={{ background: "linear-gradient(135deg, hsl(40 96% 50%) 0%, hsl(44 100% 60%) 100%)" }}>
+        <div className="max-w-3xl mx-auto">
+          <SunIcon className="h-12 w-12 mx-auto mb-4" style={{ color: "hsl(210 25% 12%)", opacity: 0.7 }} />
+          <h2 className="text-3xl sm:text-4xl font-extrabold mb-4" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: "hsl(210 25% 10%)" }}>
+            {language === "es" ? "España tiene 300 días de sol al año. ¿Los estás aprovechando?" : "Spain gets 300 sunny days a year. Are you taking advantage of them?"}
           </h2>
-          <p className="text-lg mb-8 opacity-90">
-            {language === "en"
-              ? "Contact us today for a free site evaluation and custom quote"
-              : "Contáctanos hoy para una evaluación gratuita del sitio y un presupuesto personalizado"}
+          <p className="text-base mb-8" style={{ color: "hsl(30 60% 25%)" }}>
+            {language === "es" ? "Únete a miles de familias y empresas españolas que ya generan su propia energía limpia y ahorran mes a mes." : "Join thousands of Spanish families and businesses already generating their own clean energy and saving every month."}
           </p>
-          <Link
-            to="/contact"
-            className="inline-block px-8 py-3 bg-white text-solar font-bold rounded-lg hover:scale-105 transition-transform"
-          >
-            {t("homepage.hero.cta1")}
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-10 py-4 rounded-xl text-base font-bold shadow-lg transition-transform hover:scale-105"
+              style={{ backgroundColor: "hsl(210 25% 12%)", color: "hsl(44 100% 65%)" }}>
+              {language === "es" ? "Solicitar visita gratuita" : "Request free visit"}
+            </button>
+            <button className="px-10 py-4 rounded-xl text-base font-bold border-2 transition-all hover:opacity-80"
+              style={{ borderColor: "hsl(210 25% 12%)", color: "hsl(210 25% 12%)", backgroundColor: "transparent" }}>
+              {language === "es" ? "Ver instalaciones reales" : "View real installations"}
+            </button>
+          </div>
         </div>
       </section>
 

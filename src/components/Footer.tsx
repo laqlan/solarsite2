@@ -76,6 +76,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  to="/business-installation"
+                  className="text-sm text-muted-foreground hover:text-solar transition-colors"
+                >
+                  {language === "en" ? "Business Installation" : "Instalación Empresarial"}
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/services#service-solar"
                   className="text-sm text-muted-foreground hover:text-solar transition-colors"
                 >

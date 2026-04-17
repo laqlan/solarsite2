@@ -6,6 +6,7 @@ import Services from "./pages/services";
 import Projects from "./pages/projects";
 import About from "./pages/about";
 import ResidentialInstallation from "./pages/residential-installation";
+import BusinessInstallation from "./pages/business-installation";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/residential-installation" element={<ResidentialInstallation />} />
+          <Route path="/business-installation" element={<BusinessInstallation />} />
         </Routes>
       </Router>
     </I18nProvider>

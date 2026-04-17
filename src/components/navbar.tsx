@@ -110,7 +110,7 @@ const Navbar = () => {
                 className="px-4 py-2 text-sm font-medium rounded-lg transition-colors"
                 style={{ color: "rgb(67, 89, 112)" }}
               >
-                {t("nav.home")}
+                {t("home")}
               </Link>
               <Link
                 to="/services"
@@ -118,7 +118,7 @@ const Navbar = () => {
                 className="px-4 py-2 text-sm font-medium rounded-lg transition-colors"
                 style={{ color: "rgb(67, 89, 112)" }}
               >
-                {t("nav.services")}
+                {t("services")}
               </Link>
               <Link
                 to="/projects"
@@ -126,7 +126,7 @@ const Navbar = () => {
                 className="px-4 py-2 text-sm font-medium rounded-lg transition-colors"
                 style={{ color: "rgb(67, 89, 112)" }}
               >
-                {t("nav.projects")}
+                {t("projects")}
               </Link>
               <Link
                 to="/about"
@@ -134,7 +134,7 @@ const Navbar = () => {
                 className="px-4 py-2 text-sm font-medium rounded-lg transition-colors"
                 style={{ color: "rgb(67, 89, 112)" }}
               >
-                {t("nav.about")}
+                {t("about")}
               </Link>
               <Link
                 to="/contact"
@@ -142,7 +142,7 @@ const Navbar = () => {
                 className="px-4 py-2 text-sm font-medium rounded-lg transition-colors"
                 style={{ color: "rgb(67, 89, 112)" }}
               >
-                {t("nav.contact")}
+                {t("contact")}
               </Link>
             </nav>
 
@@ -178,11 +178,10 @@ const Navbar = () => {
                 className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-sm font-bold transition-all"
                 style={{ backgroundColor: "#25D366", color: "white" }}
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-
-                WhatsApp
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 3 .97 4.29L2 22l6.29-.97C9 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.41 0-2.73-.35-3.88-.94l-.28-.15-2.89.44.44-2.89-.15-.28C4.35 14.73 4 13.41 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm3.71-8.04c-.18-.09-1.08-.53-1.25-.59-.17-.07-.29-.11-.41.11-.12.22-.46.59-.56.71-.1.12-.21.13-.39.04-1.78-.89-2.79-1.28-3.68-2.79-.25-.43.25-.41.25-.41.65-1.06.73-1.7.48-2.04-.25-.35-.46-.45-.73-.47-.27-.02-.56 0-.85.01-.29.01-.76.29-1.14.55-1.58 1.14-1.26 3.32-.06 5.25 1.2 1.93 3.40 3.18 5.84 3.89.71.24 1.43.12 2.02-.3.37-.28.68-.76.76-1.29.06-.41-.13-.65-.33-.72z"/>
+                </svg>
+                {t("whatsapp")}
               </a>
               <Link
                 to="/contact"

@@ -697,16 +697,21 @@ export default function Home() {
             </div>
 
             {[
-              { title: language === "es" ? "Servicios" : "Services", links: language === "es" ? ["Instalación residencial", "Instalación empresarial", "Baterías", "Autoconsumo", "Mantenimiento"] : ["Residential installation", "Business installation", "Batteries", "Self-consumption", "Maintenance"] },
-              { title: language === "es" ? "Empresa" : "Company", links: language === "es" ? ["Sobre nosotros", "Proyectos", "Blog solar", "Empleo", "Prensa"] : ["About us", "Projects", "Solar blog", "Careers", "Press"] },
-              { title: language === "es" ? "Legal" : "Legal", links: language === "es" ? ["Aviso legal", "Privacidad", "Cookies", "Términos y condiciones"] : ["Legal notice", "Privacy", "Cookies", "Terms & conditions"] },
+              { 
+                title: language === "es" ? "Servicios" : "Services", 
+                links: language === "es" 
+                  ? [{ text: "Instalación residencial", href: "/residential-installation" }, { text: "Instalación empresarial", href: "#" }, { text: "Baterías", href: "/services#service-battery" }, { text: "Autoconsumo", href: "/services#service-group-consumption" }, { text: "Mantenimiento", href: "/services#service-maintenance" }]
+                  : [{ text: "Residential installation", href: "/residential-installation" }, { text: "Business installation", href: "#" }, { text: "Batteries", href: "/services#service-battery" }, { text: "Self-consumption", href: "/services#service-group-consumption" }, { text: "Maintenance", href: "/services#service-maintenance" }]
+              },
+              { title: language === "es" ? "Empresa" : "Company", links: language === "es" ? [{ text: "Sobre nosotros", href: "/about" }, { text: "Proyectos", href: "/projects" }, { text: "Blog solar", href: "#" }, { text: "Empleo", href: "#" }, { text: "Prensa", href: "#" }] : [{ text: "About us", href: "/about" }, { text: "Projects", href: "/projects" }, { text: "Solar blog", href: "#" }, { text: "Careers", href: "#" }, { text: "Press", href: "#" }] },
+              { title: language === "es" ? "Legal" : "Legal", links: language === "es" ? [{ text: "Aviso legal", href: "#" }, { text: "Privacidad", href: "#" }, { text: "Cookies", href: "#" }, { text: "Términos y condiciones", href: "#" }] : [{ text: "Legal notice", href: "#" }, { text: "Privacy", href: "#" }, { text: "Cookies", href: "#" }, { text: "Terms & conditions", href: "#" }] },
             ].map((col) => (
               <div key={col.title}>
                 <h4 className="text-sm font-bold mb-4 text-white">{col.title}</h4>
                 <ul className="space-y-2.5">
                   {col.links.map((link) => (
-                    <li key={link}>
-                      <a href="#" className="text-sm hover:text-white transition-colors">{link}</a>
+                    <li key={link.text}>
+                      <Link to={link.href} className="text-sm hover:text-white transition-colors">{link.text}</Link>
                     </li>
                   ))}
                 </ul>

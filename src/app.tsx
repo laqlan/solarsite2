@@ -5,6 +5,7 @@ import Contact from "./pages/contact";
 import Services from "./pages/services";
 import Projects from "./pages/projects";
 import About from "./pages/about";
+import ResidentialInstallation from "./pages/residential-installation";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
+          <Route path="/residential-installation" element={<ResidentialInstallation />} />
         </Routes>
       </Router>
     </I18nProvider>

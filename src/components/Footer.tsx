@@ -10,8 +10,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="font-bold text-lg text-foreground mb-4">
-              {t("footer.companyName")}
+            <h3 className="font-bold text-lg mb-4" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'rgb(34, 46, 57)' }}>
+              Pure<span style={{ color: "rgb(250, 168, 5)" }}>Grid</span>
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t("footer.description")}

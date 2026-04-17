@@ -209,7 +209,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <Link to="/contact" className="btn-solar px-8 py-3.5 rounded-xl text-base font-bold shadow-lg transition-transform hover:scale-105 flex items-center justify-center gap-2">
-                  {t("home.hero.cta1")}
+                  {t("homepage.hero.cta1")}
                   <ArrowRightIcon className="h-5 w-5" />
                 </Link>
                 <a href="https://wa.me/34925518492" className="px-8 py-3.5 rounded-xl text-base font-semibold transition-all hover:opacity-80 flex items-center justify-center gap-2"

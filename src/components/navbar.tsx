@@ -80,7 +80,7 @@ const Navbar = () => {
               WhatsApp
             </a>
             <Link to="/contact" className="btn-solar px-4 sm:px-5 py-2 rounded-lg text-sm font-bold shadow transition-transform hover:scale-105 whitespace-nowrap">
-              {t("nav.getQuote")}
+              {t("homepage.hero.cta1")}
             </Link>
           </div>
 
@@ -189,7 +189,7 @@ const Navbar = () => {
                 onClick={() => setMobileMenuOpen(false)}
                 className="btn-solar w-full px-5 py-2 rounded-lg text-sm font-bold shadow transition-transform text-center block"
               >
-                {t("nav.getQuote")}
+                {t("homepage.hero.cta1")}
               </Link>
             </div>
           </div>

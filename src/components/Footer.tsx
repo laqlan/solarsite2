@@ -10,9 +10,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="font-bold text-lg mb-4" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'rgb(34, 46, 57)' }}>
-              Pure<span style={{ color: "rgb(250, 168, 5)" }}>Grid</span>
-            </h3>
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="h-9 w-9 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, rgb(250, 168, 5), rgb(255, 207, 77))" }}>
+                <img src="/images/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
+              </div>
+              <span className="text-lg font-bold" style={{ fontFamily: '"Plus Jakarta Sans", sans-serif', color: 'rgb(34, 46, 57)' }}>
+                Pure<span style={{ color: "rgb(250, 168, 5)" }}>Grid</span>
+              </span>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {t("footer.description")}
             </p>
@@ -157,12 +162,6 @@ export default function Footer() {
             >
               ES
             </button>
-            </div>
-          </div>
-          {/* Logo Section */}
-          <div className="flex justify-center mt-8">
-            <div className="relative w-24 h-24 rounded-full bg-solar flex items-center justify-center">
-              <img src="/images/logo.png" alt="Logo" className="h-20 w-20 object-contain" />
             </div>
           </div>
         </div>

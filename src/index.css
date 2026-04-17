@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* ── Core palette ── */
+    --background: 45 30% 97%;          /* warm off-white, like sunlit paper */
+    --foreground: 210 25% 18%;         /* deep slate-navy for text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 25% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 25% 18%;
+
+    /* Sun-gold primary */
+    --primary: 40 96% 50%;
+    --primary-foreground: 210 25% 12%;
+
+    /* Sky blue secondary */
+    --secondary: 205 78% 92%;
+    --secondary-foreground: 205 60% 28%;
+
+    --muted: 45 20% 93%;
+    --muted-foreground: 210 15% 50%;
+
+    --accent: 40 96% 94%;
+    --accent-foreground: 30 80% 30%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 45 20% 86%;
+    --input: 45 20% 86%;
+    --ring: 40 96% 50%;
+
+    --radius: 0.75rem;
+
+    /* ── Brand tokens ── */
+    --sun-gold: 40 96% 50%;            /* #f5a800 — vibrant amber-gold */
+    --sun-gold-light: 44 100% 65%;     /* #ffc533 — bright highlight */
+    --sun-gold-deep: 34 90% 42%;       /* #c97d0d — deep warm accent */
+    --sky: 205 78% 50%;                /* #1a9de0 — mediterranean sky */
+    --sky-light: 205 78% 92%;          /* #d6eefb — pale sky wash */
+    --sky-deep: 210 60% 28%;           /* #1b3f6b — deep ocean blue */
+    --leaf: 145 55% 40%;               /* #2e9e5b — eco green */
+    --warm-white: 45 30% 97%;
+    --slate-dark: 210 25% 18%;
+
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 210 25% 18%;
+    --sidebar-primary: 40 96% 50%;
+    --sidebar-primary-foreground: 210 25% 12%;
+    --sidebar-accent: 45 20% 93%;
+    --sidebar-accent-foreground: 210 25% 18%;
+    --sidebar-border: 45 20% 86%;
+    --sidebar-ring: 40 96% 50%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  /* Hero: soft sunlit sky gradient */
+  .gradient-hero {
+    background: linear-gradient(
+      160deg,
+      hsl(205 78% 94%) 0%,
+      hsl(45 80% 96%) 55%,
+      hsl(44 100% 90%) 100%
+    );
+  }
+
+  /* Golden CTA gradient */
+  .gradient-solar {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--sun-gold)) 0%,
+      hsl(var(--sun-gold-light)) 100%
+    );
+  }
+
+  /* Deep sky gradient for dark sections */
+  .gradient-sky {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--sky-deep)) 0%,
+      hsl(205 65% 40%) 100%
+    );
+  }
+
+  /* Warm section wash */
+  .gradient-warm {
+    background: linear-gradient(
+      180deg,
+      hsl(45 50% 97%) 0%,
+      hsl(205 40% 97%) 100%
+    );
+  }
+
+  .text-gradient-solar {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--sun-gold-deep)) 0%,
+      hsl(var(--sun-gold)) 50%,
+      hsl(var(--sun-gold-light)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-sky {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--sky-deep)) 0%,
+      hsl(var(--sky)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .sun-shadow {
+    box-shadow: 0 4px 24px -4px hsl(40 96% 50% / 0.35),
+                0 1px 4px -1px hsl(40 96% 50% / 0.2);
+  }
+
+  .card-shadow {
+    box-shadow: 0 2px 16px -2px hsl(210 25% 18% / 0.08),
+                0 1px 4px -1px hsl(210 25% 18% / 0.05);
+  }
+}
+
+/* ── Marquee animation ── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* ── Subtle shimmer on gold buttons ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+.btn-solar {
+  background: linear-gradient(
+    90deg,
+    hsl(34 90% 42%) 0%,
+    hsl(40 96% 50%) 35%,
+    hsl(44 100% 65%) 50%,
+    hsl(40 96% 50%) 65%,
+    hsl(34 90% 42%) 100%
+  );
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+  color: hsl(210 25% 12%);
+  font-weight: 700;
+}
+.btn-solar:hover {
+  animation-duration: 1.5s;
+}

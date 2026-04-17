@@ -537,14 +537,14 @@ export default function Home() {
             {language === "es" ? "Únete a miles de familias y empresas españolas que ya generan su propia energía limpia y ahorran mes a mes." : "Join thousands of Spanish families and businesses already generating their own clean energy and saving every month."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 rounded-xl text-base font-bold shadow-lg transition-transform hover:scale-105"
+            <Link to="/contact" className="px-10 py-4 rounded-xl text-base font-bold shadow-lg transition-transform hover:scale-105 inline-block"
               style={{ backgroundColor: "hsl(210 25% 12%)", color: "hsl(44 100% 65%)" }}>
               {language === "es" ? "Solicitar visita gratuita" : "Request free visit"}
-            </button>
-            <button className="px-10 py-4 rounded-xl text-base font-bold border-2 transition-all hover:opacity-80"
+            </Link>
+            <Link to="/projects" className="px-10 py-4 rounded-xl text-base font-bold border-2 transition-all hover:opacity-80 inline-block"
               style={{ borderColor: "hsl(210 25% 12%)", color: "hsl(210 25% 12%)", backgroundColor: "transparent" }}>
               {language === "es" ? "Ver instalaciones reales" : "View real installations"}
-            </button>
+            </Link>
           </div>
         </div>
       </section>

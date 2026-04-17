@@ -676,11 +676,11 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2.5 mb-4">
-                <div className="h-9 w-9 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, hsl(40 96% 50%), hsl(44 100% 65%))" }}>
-                  <SunIcon className="h-5 w-5 text-white" />
+                <div className="h-9 w-9 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, rgb(250, 168, 5), rgb(255, 207, 77))" }}>
+                  <img src="/images/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
                 </div>
                 <span className="text-xl font-bold text-white" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                  Sol<span style={{ color: "hsl(40 96% 55%)" }}>Tech</span>
+                  Pure<span style={{ color: "rgb(250, 168, 5)" }}>Grid</span>
                 </span>
               </div>
               <p className="text-sm leading-relaxed mb-4">

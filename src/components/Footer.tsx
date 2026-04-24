@@ -82,40 +82,6 @@ export default function Footer() {
                   {language === "en" ? "Business Installation" : "Instalación Empresarial"}
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/services#service-solar"
-                  className="text-sm text-muted-foreground hover:text-solar transition-colors"
-                >
-                  {language === "en" ? "Solar Panels" : "Paneles Solares"}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services#service-battery"
-                  className="text-sm text-muted-foreground hover:text-solar transition-colors"
-                >
-                  {language === "en" ? "Battery Storage" : "Almacenamiento"}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services#service-ev"
-                  className="text-sm text-muted-foreground hover:text-solar transition-colors"
-                >
-                  {language === "en" ? "EV Charging" : "Carga de VE"}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services#service-smart"
-                  className="text-sm text-muted-foreground hover:text-solar transition-colors"
-                >
-                  {language === "en"
-                    ? "Smart Energy"
-                    : "Gestión Inteligente"}
-                </Link>
-              </li>
             </ul>
           </div>
 
